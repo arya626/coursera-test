@@ -162,6 +162,36 @@ vertical-align: middle;
     opacity: 0.7;
 
 }
+/**** END OF HOMEPAGE ****/
+.category-tile{
+    position: relative;
+    border: 2px solid #3F0C1F;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 15px;
+}
+.category-tile span{
+    position: absolute;
+    bottom:0;
+    right:0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    background-color: #000;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.category-tile:hover{
+    box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menu-categories-title + div{
+    margin-bottom: 50px;
+}
+
 /***************** Large Devices only ****************/
 @media (min-width:1200px){
     .container .jumbotron{
@@ -235,7 +265,7 @@ vertical-align: middle;
         text-transform: uppercase;
     }
     /*END HEADER*/
-    
+
     /* FOOTER */
     .panel-footer section{
         margin-bottom :30px;
@@ -279,4 +309,16 @@ vertical-align: middle;
         width:280px;
         margin :0  auto 15px;
     }
+
+    .col-xxs-12{
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        float: left;
+        width:100%;
+    }
+
 }
+
+
