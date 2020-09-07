@@ -139,6 +139,37 @@
 //     console.log("Multiplier is "+multiplier);
 // }
 
-(function() {
-    console.log("Hello Arya!");
-})();
+// (function() {
+//     console.log("Hello Arya!");
+// })();
+
+// console.log(document.getElementById("title"));
+document.addEventListener("DOMContentLoaded",
+    function (event){
+        function sayHello(event){
+            this.textContent ="I just said!"
+            var name = document.getElementById("name").value;
+            var message = "<h2>Hello "+ name + "!<h2>";
+        
+            // document.getElementById("content").textContent = message;
+            document.getElementById("content").innerHTML = message;
+        
+            if (name === "student"){
+                var title = document.querySelector("#title").textContent;
+                title += " & Lovin' it!";
+                document.querySelector("#title").textContent = title;
+            }
+        }
+        
+        //Unobstructive event binding
+        document.querySelector("button").addEventListener("click",sayHello);
+
+        document.querySelector("body").addEventListener("mousemove",
+            function (event){
+               
+                console.log("x :" + event.clientX);
+                console.log("y :" + event.clientY);
+            }
+        )
+    }
+);
